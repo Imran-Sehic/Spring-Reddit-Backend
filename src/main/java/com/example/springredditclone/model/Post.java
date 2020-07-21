@@ -29,6 +29,7 @@ public class Post {
     @Nullable
     @Lob
     private String description;
+    @Builder.Default
     private Integer voteCount = 0;
     @ManyToOne(fetch = LAZY)
     @JoinColumn(name = "userId", referencedColumnName = "userId")
